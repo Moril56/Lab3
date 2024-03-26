@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int count_20, count_50, count_100, count_200;
+
+    // Зчитуємо кількість купюр кожного номіналу
+    printf("Введіть кількість купюр номіналом 20, 50, 100 та 200 грн: ");
+    scanf("%d %d %d %d", &count_20, &count_50, &count_100, &count_200);
+
+    // Обчислюємо суму грошей купюрами кожного номіналу
+    int sum_20 = count_20 * 20;
+    int sum_50 = count_50 * 50;
+    int sum_100 = count_100 * 100;
+    int sum_200 = count_200 * 200;
+
+    // Знаходимо найменшу суму
+    int min_sum = sum_20;
+    if (sum_50 < min_sum) min_sum = sum_50;
+    if (sum_100 < min_sum) min_sum = sum_100;
+    if (sum_200 < min_sum) min_sum = sum_200;
+
+    // Виводимо результат
+    if (min_sum == sum_20) {
+        printf("Найменша сума грошей - %d грн купюрами номіналом 20 грн\n", min_sum);
+    } else if (min_sum == sum_50) {
+        printf("Найменша сума грошей - %d грн купюрами номіналом 50 грн\n", min_sum);
+    } else if (min_sum == sum_100) {
+        printf("Найменша сума грошей - %d грн купюрами номіналом 100 грн\n", min_sum);
+    } else {
+        printf("Найменша сума грошей - %d грн купюрами номіналом 200 грн\n", min_sum);
+    }
+
+    return 0;
+}
