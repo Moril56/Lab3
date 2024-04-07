@@ -7,13 +7,13 @@ int main() {
     printf("Введіть значення s: ");
      if (scanf("%lf", &s) != 1) {
       printf("Помилка введення s\n");
-      return 1;
+      return 0;
      }
 
     printf("Введіть значення a: ");
     if (scanf("%lf", &a) != 1) {
       printf("Помилка введення a\n");
-      return 1;
+      return 0;
   }
     if (s < 0) {
      f = 2 * s + a;
