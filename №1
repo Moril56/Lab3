@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h> 
+
+int main() {
+    double a, f, s; 
+    printf("Введіть значення s: ");
+    if (scanf("%lf", &s) != 1) {
+        printf("Помилка введення s\n");
+        return 0;
+    }
+
+    printf("Введіть значення a: ");
+    if (scanf("%lf", &a) != 1) {
+        printf("Помилка введення a\n");
+        return 0;
+    }
+
+    if (s < 0) {
+        f = 2 * s + a;
+    } else if (s == 0 && s + a - 5 >= 0) { 
+        f = sqrt(s + a - 5);
+    } else if (s > 0 && 2 * a - 4 != 0) {
+        f = 2 * s / (2.0 * a - 4);
+    } else {
+        printf("Неможливо визначити обчислення для введених значень\n");
+        return 0;
+    }
+
+    printf("Результат обчислення: f = %.2lf\n", f);
+
+    return 0;
+}
